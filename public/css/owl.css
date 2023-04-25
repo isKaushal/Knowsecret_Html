@@ -1,0 +1,42 @@
+
+
+/* slider controls */
+
+.owl-nav{
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 100;
+    font-size: 5rem;
+    color: var(--Yellow--color);
+}
+
+.owl-prev{
+    transition: 0.4s ease-in-out;
+    left: 1%;
+    
+}
+
+.owl-prev:hover{
+    transform: translatex(-5px);
+}
+
+.owl-next{
+    transition: 0.4s ease-in-out;
+}
+
+
+.owl-next:hover{
+    transform: translatex(5px);
+} 
+
+
+.owl-theme .owl-nav :hover{
+    background: transparent !important;
+    color: var(--Yellow--color) !important;
+}
+
+
+

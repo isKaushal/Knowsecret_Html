@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/tailwindcss.js"></script>
+    <!-- <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous" 
+    ></script> -->
+
+
+    
+    <link rel="stylesheet" type="text/css" href="css/formmain.css" />
+    <style>
+      .main-preloder{
+        transition: 1s ease-in-out;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        z-index: -10;
+      }
+
+      @keyframes spin{
+        100%{transform: rotate(360deg);}
+      }
+
+      svg{
+        width: 100px;
+        height: 100px;
+        animation: spin 5s linear infinite ;  
+      }
+
+      circle{
+        transform: translate(50%,50%) scale(0.6) ;
+        stroke: rgb(255, 255, 255);
+        fill: none;
+        stroke-width: 8;
+        stroke-dashoffset: 600;
+        stroke-dasharray: 300;
+        stroke-linecap: round;
+        animation: svg 3s steps(3000) infinite;  
+      }
+
+      @keyframes svg{
+        100%{stroke-dashoffset: 0;}
+      }
+      
+      .hide-active{
+        height: max-content !important;
+      }
+
+    </style>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <!-- preloder -->
+      <div class="main-preloder" id="main-preloder">
+        <svg>
+          <circle r="40" ></circle>
+        </svg>
+      </div>
+    <!-- preloder -->
+    <div class="uniwarsal-wrap px-4  sm:px-8 md:px-[6rem]  lg:px-[8rem] ">
+      <div class="logo ">
+        <div class=" py-3 flex justify-center lg:justify-start  ">
+          <!-- <img src="/image/tesntrack.png" alt="" />   -->
+        </div>
+        <h3 class="text-center" >
+          Hello Evaluator !<br> Welcome To TesnTrack
+        </h3>
+      </div>
+
+
+
+
+
+
+      <form id="main-form" class="form ">
+        <h2 class="pb-0" >Select your image:-</h2>
+        <h5 class="h3 text-sm  " > only JPG formate and 500 x 500 Size:-</h5>
+        <div class="input-wrap grid h-[7rem] md:flex md:h-[3.5rem] lg:flex lg:h-[3.5rem]">
+          <input required  class=" bg-white p-2 mx-1 "  name="Name" id="image" type="file" placeholder="image*" />
+          <div class="h-full  lg:mt-[-3rem] md:mt-[-3rem] grid items-center ">
+            <h2 class="p-0 pb-1 pl-1 " >Make Profile ID:-</h2>
+            <input required  class="p-5 mx-1" name="Email" id="scerate_handle" type="text" placeholder="Example: rahul_123*"/>
+          </div>
+        </div>
+        <h2>Your Details:-</h2>
+        <div class="input-wrap grid h-[7rem] md:flex md:h-[3.5rem] lg:flex lg:h-[3.5rem] ">
+          <input required  class="p-5 mx-1 "  name="Name" id="name" type="text" placeholder="Your name*" />
+          <input required  class="p-5 mx-1 "
+            name="DOB"
+            id="dob"
+            type="date"
+            placeholder="Date Of Birth*"
+          />
+        </div>
+        <div class="input-wrap grid h-[7rem] md:flex md:h-[3.5rem] lg:flex lg:h-[3.5rem] ">
+          <input required  class="p-5 mx-1" name="Address" id="address" type="text" placeholder="Address*" />
+          <input required  class="p-5 mx-1" name="Pincode" id="pincode" type="number" placeholder="Pin code*" />
+        </div>
+        <div class="input-wrap grid h-[7rem] md:flex md:h-[3.5rem] lg:flex lg:h-[3.5rem] ">
+          <input required  class="p-5 mx-1" name="Email" id="email" type="text" placeholder="Your Email*" />
+          <input required  class="p-5 mx-1" name="Contact" id="contact"  type="number" placeholder="Contact No.*" />
+        </div>
+        <h2 class="pb-0"  >HOBBIES :-</h2>
+        <h5 class="h3 text-xs  " >Click On Hobbies :-</h5>
+        <div class="input-wrap  h-[3rem] ">
+          <div class="checkbox-button-wrap">
+              <label for="music">
+                <h3>Music</h3>
+                <input class="p-5 mx-1 "  name="music"  id="music" type="checkbox" />
+                <img src="image/Tik - Copy - Copy - Copy (3) - Copy.gif" class="tik1">
+              </label>
+          </div>
+          <div class="checkbox-button-wrap">
+              <label for="travel">
+                  <h3>Travel</h3>
+                  <input class="p-5 mx-1 "  name="Travel" id="travel"  type="checkbox" />
+                  <img src="image/Tik - Copy - Copy - Copy.gif" class="tik2">
+              </label>
+          </div>
+          <div class="checkbox-button-wrap">
+              <label for="movie">
+                  <h3>Movie</h3>
+                  <input class="p-5 mx-1"  name="Movie" id="movie" type="checkbox" />
+                  <img src="image/Tik - Copy - Copy.gif" class="tik3">
+              </label>
+          </div>
+          <div class="checkbox-button-wrap">
+              <label for="sports">
+                  <h3>Sports</h3>
+                  <input class="p-5 mx-1 "  name="Sports" id="sports" type="checkbox" />
+                  <img src="image/Tik - Copy.gif" class="tik4">
+              </label>
+          </div>
+          <div class="checkbox-button-wrap">
+              <label for="reading">
+                  <h3>Reading</h3>
+                  <input class="p-5 mx-1 "  name="Reading"  id="reading" type="checkbox" />
+                  <img src="image/Tik.gif" class="tik5">
+              </label>
+          </div>
+        </div>
+
+
+
+
+        <saction class="form my-40 " id="form">
+          <h2 class="pb-0" >Education:-</h2>
+          <h5 class="h3 text-sm  " >Recomended only FOUR(4) :-</h5>
+            <div class=" block  ">
+              <div class="w-full grid lg:flex justify-center items-center  ">
+                <input class="p-4 m-1" id="degree" type="text" placeholder="Your degree*" />
+                <input class="p-4 m-1" id="year" type="text" placeholder="Year*" />
+              </div>
+              <div class="w-full grid lg:flex justify-center items-center  ">
+                <input class="p-4 m-1" id="university" type="text" placeholder="university/board*" />
+                <!-- <input class="p-4 m-1" id="school" type="text" placeholder="School*" /> -->
+                <input class="p-4 m-1" id="result" type="text" placeholder="Result*" />
+              </div>
+            </div>
+            <h1 class=" error-msg  text-red-600 text-xl my-2  " id="error-msg-1"  >Maximum list length reached</h1>
+            <table
+              id="table"
+              style="width: 100%; margin-top: 2rem; margin-bottom: 2rem"
+            >
+              <tr>
+                <td>Degree</td>
+                <td>Year</td>
+                <td class="universityBord">University/Board</td>
+                <!-- <td class="scholl">School</td> -->
+                <td>Result</td>
+                <td></td>
+              </tr>
+              <tbody id="table-body"></tbody>
+            </table>
+      
+            <div class="button-wrap">
+              <div class="button-wrap-inner" id="button-wrap-inner">
+                <a class="button" id="button">
+                  <i class="btn-curve" id="btn-curve"></i>
+                  <span class="btn" id="btn">ADD</span>
+                </a>
+              </div>
+            </div>
+        </saction>
+
+
+
+        <saction id="form2"class=" my-40   ">
+            <h2 class="pb-0" >Experince:-</h2>
+            <h5 class="h3 text-sm  " >Recomended only FOUR(4) :-</h5>
+            <div class="block  " style="padding: 0rem 7rem">
+              <div class="w-full grid lg:flex justify-center items-center  ">
+                <input class="p-5 m-1 "  id="Organization" type="text" placeholder="Organization*" />
+                <input class="p-5 m-1 "  id="Designation" type="text" placeholder="Designation*" />
+              </div>
+              <div class="w-full grid lg:flex justify-center items-center  ">
+                <input class="p-5 m-1 "  id="Year" type="text" placeholder="Year*" />
+                <input class="p-5 m-1 "  id="Subject" type="text" placeholder="Subject*" />
+              </div>
+            </div>
+            <h1 class=" error-msg  text-red-600 text-xl my-2  " id="error-msg-2"  >Maximum list length reached</h1>
+            <table
+              id="table2"
+              style="width: 100%; margin-top: 2rem; margin-bottom: 2rem"
+            >
+              <tr>
+                <td>Year</td>
+                <td>Organization</td>
+                <td class="universityBord">Designation</td>
+                <td class="scholl">Subject</td>
+                <td></td>
+              </tr>
+              <tbody id="table-body2"></tbody>
+            </table>
+            <div class="button-wrap">
+              <button class="button-wrap-inner" id="button-wrap-inner2">
+                <a class="button" id="button2">
+                  <i class="btn-curve" id="btn-curve2"></i>
+                  <span class="btn" id="btn2">ADD</span>
+                </a>
+              </button>
+            </div>
+        </saction>
+
+
+
+
+
+        <saction id="form3" classs="my-40 ">
+          <h2 class="px-4" >Awards/Certificates/Participation:-</h2>
+            <div class="  grid justify-center items-center md:flex  lg:flex  ">
+              <input placeholder="Award year" id="first-award"  class="  p-4 m-1 w-80 md:w-48 " type="text">
+              <input placeholder="Award name" id="second-award"  class="p-4 m-1 w-80 lg:w-[30rem] " type="text">
+            </div>
+            <div class="w-full my-4 ">
+              <table id="award-table"  class="w-full " >
+              <tr class="border-y border-white "  >
+                <td class="w-[40%]" >Award year</td>
+                <td class="w-[60%]" >Award name</td>
+                <td></td>
+              </tr>
+              <tbody id="awards-body" ></tbody>
+            </table>
+            <div class="w-full flex justify-center items-center my-4 ">
+              <div id="Awards-button" class="cursor-pointer" >ADD</div>
+            </div>
+          </div>
+          <h2 class="px-4" >Skills:-</h2>
+          <div id="skill-saction" class="area-wrap h-max ">
+            <textarea required name="Skills" maxlength="199" class="mx-1 p-4 w-full md:w-3/5 lg:w-3/5 xl:w-3/6 rounded-xl resize-none h-[8rem] " placeholder="Write here*" id="sills-text-area" cols="30" rows="10"></textarea>
+          </div>
+        </saction>
+      
+
+
+
+
+
+        <saction>
+          <h2 class="p-4 pb-0" >Testimonials(Optional):-</h2>
+          <h1 id="testimonial-toggle-arrow" class="cursor-pointer pl-10 text-white text-2xl"><span class="text-sm" >CLICK </span>&#8594</h1>
+          <div id="hide" class="hide overflow-hidden h-0 ">
+            <div id="tastimonial-container" class="tastimonial-container h-0 w-full grid lg:flex justify-center ">
+              <input id="testimonals1" class=" testimonals1 mt-[2rem] m-1 p-4 opacity-0 w-80 md:w-80 " placeholder="Student Name*"  type="text">
+              <input id="testimonals2" class=" testimonals2 mt-[2rem] m-1 p-4 opacity-0 w-80 md:w-80 " placeholder="Student Class*"  type="number">
+            </div>
+            <div id="" class="textarea flex justify-center items-center ">
+              <textarea id="testimonals3"name="" maxlength="188" id="" class="mt-[2rem] mx-1 p-3 opacity-0 w-80 md:w-80 lg:w-3/5  h-40 rounded-xl resize-none" placeholder="For Student 23 Words*"   cols="30" rows="1"></textarea>
+            </div>
+            <div id="testimonal-button-wrap"  class="w-full flex justify-center items-center h-0 overflow-hidden ">
+              <div id="testimonal-button" class="cursor-pointer mt-[2rem] opacity-0 w-[16rem]  " >ADD</div>
+            </div>
+            <table id="testimonial-table"  class="w-full opacity-0">
+              <tr>
+                <td style="width: 20%;" class="mx-3">Student Name</td>
+                <td style="width: 20%;" class="mx-3">Class</td>
+                <td style="width: 56%;" class="mx-3">For Student</td>
+                <td style="width: 4%;" class="mx-3"></td>
+              </tr>
+              <tbody id="testimonial-body" ></tbody>
+            </table>
+          </div>
+        </saction>
+       
+
+
+
+        <!-- <saction id="form4" classs="my-40">
+            <h2 class="px-4" >Social Media Handles:-</h2>
+            <div class="social-media-handlers justify-center grid lg:flex items-center h-max ">
+              <div class="handlers-dropdown-wrap grid lg:block  justify-center items-center ">
+                <input class="p-5 m-1 " type="text" autocomplete="off" id="drop-input" style=" font-size:15px;" placeholder="Select*">
+                <div class="handlers-dropdown relative lg:absolute mb-2 "  id="handlers-dropdown">
+                  <option onclick="passValue('Website')"  class="handlers-dropdown-list">Website</option>
+                  <option onclick="passValue('Facebook')"  class="handlers-dropdown-list">Facebook</option>
+                  <option onclick="passValue('Instagram')"  class="handlers-dropdown-list">Instagram</option>
+                  <option onclick="passValue('Youtube')"  class="handlers-dropdown-list">Youtube</option>
+                  <option onclick="passValue('Telegram')"  class="handlers-dropdown-list">Telegram</option>
+                  <option onclick="passValue('Linked In')"  class="handlers-dropdown-list">Linked In</option>
+                  <option onclick="passValue('Twitter')"  class="handlers-dropdown-list">Twitter</option>
+                  <option onclick="passValue('Quora')"  class="handlers-dropdown-list">Quora</option>
+                </div>
+              </div>
+              <textarea style="height: 3rem;" placeholder="Your ID*"  class="text-area p-3 mx-1 w-[20rem] lg:w-[35rem] " name="media" id="text-area-hadlers" cols="30" rows="10"></textarea>
+            </div>
+            <div class="w-full flex justify-center items-center my-4 ">
+              <div id="Social-media-button" class="cursor-pointer" >ADD</div>
+            </div>
+            <div class="social-media-handlers-list">
+              <table id ="handlers">
+                <tr>
+                  <td class="Handlers" >Social Media Handles</td>
+                  <td class="Handlers-Id" >ID</td>
+                  <td></td>
+                </tr>
+                <tbody id="handles"></tbody>
+              </table>
+            </div>
+        </saction> -->
+
+        
+
+
+
+
+        <div class="button-wrap" style="margin-top: 2.5rem;">
+          <button class="button-wrap-inner " id="main-button" type="submit">
+            <a class="button" id="button3">
+              <i class="btn-curve" id="btn-curve3"></i>
+              <span class="btn" id="btn3">Submit</span>
+            </a>
+          </button>
+        </div>
+      </form>
+
+      <div class="empty w-full h-[10rem] " id="empty"></div>
+
+
+    </div>
+    <script type="module"  src="js/formmain.js"></script>
+    <script type="module" src="js/formbutton.js"></script>
+    <!-- <script>
+      /////////////////////////////////////////// social media handles dropdown
+    let input = document.getElementById("drop-input");
+    let Drop = document.getElementById("handlers-dropdown");
+    let list = document.getElementById("handlers-dropdown-list");
+
+
+    function passValue(words) {
+      input.value = words;
+    }
+
+    input.addEventListener("click",()=>{
+      Drop.style.height = "17rem"
+    })
+      
+    function focusout() {
+      Drop.style.height = "0rem";
+    }
+    input.addEventListener("blur",focusout)
+
+/////////////////////// social media handles dropdown
+    </script> -->
+  </body>
+</html>

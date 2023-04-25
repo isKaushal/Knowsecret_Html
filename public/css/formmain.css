@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Source+Sans+Pro:wght@600&family=Work+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color : #ffffff; 
+    --orange--bg : #ff4500; 
+    --white--bg : #ffffff;
+    --black--bg : #000000;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+}
+
+.uniwarsal-wrap{
+    background: var(--black--bg);
+}
+
+h2{
+    font-size: 22px;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    color: var(--text-color);
+}
+
+.h3{ 
+    width: 100%;
+    padding: 0rem 2.5rem;
+    color: var(--text-color);
+}
+
+.logo{
+    width: 100%;
+    height: 20%;
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > h3{
+    width: 100%;
+    font-size: 28px;
+    color: var(--text-color);
+
+}
+
+.input-wrap{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input{
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.checkbox-button-wrap{
+    width: 12%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkbox-button-wrap > label{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkbox-button-wrap > label > h3{
+    color: var(--text-color);
+}
+
+.checkbox-button-wrap .tik1,.tik2,.tik3,.tik4,.tik5{
+    width: 25px;
+    height: auto;
+    display: none;
+}
+
+.checkbox-button-wrap #music:checked ~ .tik1{
+    display: block;
+}
+.checkbox-button-wrap #travel:checked ~ .tik2{
+    display: block;
+}
+.checkbox-button-wrap #movie:checked ~ .tik3{
+    display: block;
+}
+.checkbox-button-wrap #sports:checked ~ .tik4{
+    display: block;
+}
+.checkbox-button-wrap #reading:checked ~ .tik5{
+    display: block;
+}
+
+#music,
+#travel,
+#movie,
+#sports,
+#reading{
+    width: 1rem;
+    display: none;
+}
+
+/* button start */
+.button-wrap{
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+.button-wrap-inner{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    height: 4rem;
+    width: 14rem;
+    border-radius: 10px;
+}
+
+.button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 15rem;
+    height: 4rem;
+    background-color: rgb(255, 69, 0);
+    text-decoration: none;
+}
+
+.button > .btn-curve{
+    margin-right: -5px;
+    position: absolute;
+    overflow: hidden;
+    width: 1rem;
+    height: 5rem;
+    transition: all .7s ease;
+    background-color: rgba(152, 43, 3, 0.714);
+    transform: rotateZ(15deg);
+}
+
+.btn-curve > h4{
+    text-decoration: none;
+    color: var(--text-color);
+    
+}
+
+.btn{
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 200;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    
+}
+
+
+.add{
+    background-color: var(--orange--bg);
+    padding: 0.5rem 2.5rem ;
+    border-radius: 5px;
+    
+}
+
+.form{
+    width: 100%;
+}
+
+
+/* tables */
+table td{
+    text-align: center;
+    color: var(--text-color);
+    padding: 0.2rem 0rem;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.universityBord{
+    width: 20%;
+}
+
+.scholl{
+    width: 30%;
+}
+
+.remove{
+    cursor: pointer;
+}
+
+/* tables */
+/* button start */
+/* Awards/Certificates/Participation container */
+
+.area-wrap{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+}   
+
+.skills{
+    width: 60%;
+    height: 3rem;
+    resize: none;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.year-wrap{
+    display: grid;
+}
+
+.year-sclect{
+    padding: 1rem;
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 100;
+}
+
+.year-sclect > option{
+    background: var(--orange--bg);
+    font-weight: 200;
+    color: rgb(8, 0, 0);
+}
+
+/* Awards/Certificates/Participation container */
+/* skills container */
+
+.field-names {
+    padding-left: 10rem;
+    width: 50%;
+    height: 100%;
+    display: grid;
+}
+
+.field-names > h3{
+    margin-top: 5px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+
+
+.text-area{
+    width: 30rem;
+    height: 2.5rem;
+    resize: none;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* skills container */
+/* testimonials container */
+#testimonial-table,
+#testimonals1,
+#testimonals2,
+#testimonals3,
+.tastimonial-container{
+    transition: 1s ease-in-out;
+}
+
+
+.testimonial-table-active{
+    margin-top: 1rem !important;
+    opacity: 1 !important;
+    
+}
+
+.tastimonial-active{
+    height: max-content !important;
+    
+}
+
+
+.testimonials-toggle {
+    margin-top: 0.5rem !important;
+    opacity: 1 !important;
+}
+
+/* testimonials container */
+/* social media handle */
+
+.social-media-handlers{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.handlers-dropdown{
+    display: grid;
+    transition: 1s;
+    overflow: hidden;
+    border-radius: 10px;
+    position: absolute;
+    width: 20rem;
+    height: 0rem;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+    background-color: var(--white--bg);
+    z-index: 20;
+    align-content: center;
+}
+
+.handlers-dropdown-list{
+    text-align: center;
+    width: 100%;
+    font-weight: 200;
+    font-size: 18px;
+    padding: 2px 0px;
+    cursor: pointer;
+}
+
+.social-media-handlers-list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-handlers-list > table{
+    width: 100%;
+}
+
+.Handlers{
+    width: 30%;
+}
+.Handlers-Id{
+    width: 65%;
+}
+
+#Awards-button{
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 18px;
+    transition: 1s ease-in-out;
+    background-color: var(--orange--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonal-button{
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 18px;
+    transition: 1s ease-in-out;
+    background-color: var(--orange--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonal-button:hover{
+    color: var(--text-color);
+}
+
+#Social-media-button{
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 18px;
+    transition: 0.5s;
+    background-color: var(--orange--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Social-media-button:hover{
+    color: var(--text-color);
+}
+
+.error-msg{
+    display: none;
+}
+
+/* social media handle */
+/* ?second page */

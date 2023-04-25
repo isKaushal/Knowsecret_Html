@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/js/tailwindcss.js"></script>
+        <script src="/js/anime.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Knowsecret Admin</title>
+        <style>
+            
+            .font-upper {
+                font-family: "Teko", sans-serif;
+            }
+
+            .font {
+                font-family: "Baloo 2", cursive;
+                font-family: "Roboto", sans-serif;
+                font-family: "Source Sans Pro", sans-serif;
+                font-family: "Work Sans", sans-serif;
+            }
+
+            .logo-container {
+                border-bottom: 1.3px solid rgba(0, 0, 0, 0.189);
+            }
+
+            .sidebar-list {
+                transition: 1s ease-in-out;
+            }
+
+            .search {
+                border-bottom: 1.3px solid rgba(0, 0, 0, 0.189);
+            }
+
+            table td {
+                text-align: center;
+                color: white;
+                padding: 0.2rem 0rem;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+            }
+
+            .main-button {
+                position: relative;
+                transition: 0.6s ease-in-out;
+            }
+
+            .button-dot {
+                transition: 0.3s ease-in-out;
+            }
+
+            .bg {
+                width: 0.3rem;
+                transition: 0.5s ease-in-out;
+                position: absolute;
+                border-radius: 10px;
+                height: 0rem;
+                background-color: #111970;
+            }
+
+            .listname,
+            #bgcolor,
+            #bgcolor2 {
+                transition: 0.5s ease-in-out;
+            }
+
+            .overflow {
+                width: 100%;
+                height: 88.5%;
+                box-shadow: inset -2px 2px 10px rgba(0, 0, 0, 0.397);
+                overflow-y: scroll;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* Internet Explorer 10+ */
+            }
+
+            .overflow::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+
+            .message {
+                transition: 0.2s ease-in-out;
+                background: rgb(29 78 216);
+                z-index: 12;
+                opacity: 0;
+                left: 50%;
+                top: 90%;
+            }
+
+            .listname1 {
+                content: "";
+                top: -20px;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                box-shadow: 7.5px 7.5px #ffffff;
+                border-bottom-right-radius: 50%;
+                transition: 0.6s ease-in-out;
+                opacity: 0;
+                transition: 0.6s ease-in-out;
+            }
+
+            .listname2 {
+                content: "";
+                bottom: -20px;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                box-shadow: 7.5px -7.5px #ffffff;
+                border-top-right-radius: 50%;
+                transition: 0.6s ease-in-out;
+                opacity: 0;
+                transition: 0.6s ease-in-out;
+            }
+
+            .listname3 {
+                content: "";
+                top: -20px;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                color: aqua;
+                position: absolute;
+                box-shadow: 7.5px 7.5px #ffffff;
+                border-bottom-right-radius: 50%;
+                opacity: 0;
+                transition: 0.6s ease-in-out;
+            }
+
+            .listname4 {
+                content: "";
+                bottom: -20px;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                box-shadow: 7.5px -7.5px #ffffff;
+                border-top-right-radius: 50%;
+                opacity: 0;
+                transition: 0.6s ease-in-out;
+            }
+
+            /* email request or panal tile changer  */
+
+            .tile-changer {
+                z-index: 10 !important;
+                opacity: 1!important;
+            }
+
+            /* email request or panal tile changer  */
+
+            /* ui shadows */
+            .listing {
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+            }
+            /* ui shadows */
+
+            .search-input {
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+            }
+        </style>
+    </head>
+    <body class="w-screen h-screen overflow-hidden">
+        <div
+            id="message"
+            class="message absolute w-[12rem] rounded-md grid justify-center items-center h-[4rem]"
+        >
+            <h1 id="active" class="font font-semibold text-white text-[19px] hidden">Profile Active</h1>
+            <h1 id="deactive" class="font font-semibold text-white text-[19px] hidden">Profile Deactive</h1>
+        </div>
+        <div class="main w-screen h-screen overflow-hidden">
+            <div class="flex w-full h-[92%]">
+                <div class="w-[16%] h-full">
+                    <div class="logo-container flex items-center h-[9%] px-5">
+                        <div class="logo font-bold text-2xl">LOGO</div>
+                    </div>
+                    <div class="sidebar h-full py-10 pl-1 bg-blue-700 overflow-hidden">
+                        <div class="sidebar-list w-full h-full">
+                            <div id="bgcolor" class="flex items-center relative rounded-l-md my-4">
+                                <div id="listname1" class="listname1"></div>
+                                <div
+                                    id="total"
+                                    class="cursor-pointer font-semibold text-white font text-[16px] rounded-md w-full h-[3rem] py-2.5 text-center"
+                                >
+                                    Total Profiles
+                                </div>
+                                <div id="listname2" class="listname2"></div>
+                            </div>
+                            <div id="bgcolor2" class="flex items-center relative rounded-l-md my-4">
+                                <div id="listname3" class="listname3"></div>
+                                <div
+                                    id="request"
+                                    class="cursor-pointer font-semibold text-white font text-[16px] rounded-md w-full h-[3rem] py-2.5 text-center "
+                                >
+                                    Email request
+                                </div>
+                                <div id="listname4" class="listname4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- toogler -->
+                <div class="tiles relative w-full h-screen">
+                    <!-- 11111111111111111111111 -->
+
+                    <div id="tile-one" class="login-list-container absolute transition-all opacity-0  w-full h-full">
+                        <div class="search flex justify-between h-[8%]">
+                            <h2 class="text-2xl my-auto font-semibold">Total Profiles</h2>
+                            <div class="flex">
+                                <i class="fa-solid fa-magnifying-glass mx-4 my-auto"></i>
+                                <input
+                                    id="search"
+                                    type="search"
+                                    placeholder="Search..."
+                                    class="search-input my-auto outline-none p-3 w-[6.5rem] transition-all rounded-md h-[2rem]"
+                                    name=""
+                                />
+                                <div class="fetch-button w-28 flex justify-center items-center">
+                                    <button id="fetch-btn" class="bg-blue-700 px-5 py-1 rounded-md text-white">
+                                        Refresh
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search2 flex justify-between bg-white">
+                            <div id="name" class="flex w-[95%] h-8 mx-auto rounded-md">
+                                <div
+                                    class="my-1 w-[25%] border-gray-400 border-x-[1.5px] text-[17px] text-center uppercase font-upper name"
+                                >
+                                    user Name
+                                </div>
+                                <div
+                                    class="my-1 w-[30%] border-gray-400 border-r-[1.5px] text-[17px] text-center uppercase font-upper email"
+                                >
+                                    user Email
+                                </div>
+                                <div
+                                    class="my-1 w-[30%] border-gray-400 border-r-[1.5px] text-[17px] text-center uppercase font-upper email"
+                                >
+                                    Phone number
+                                </div>
+                                <div
+                                    class="my-1 w-[25%] border-gray-400 border-r-[1.5px] text-[17px] text-center uppercase font-upper handle"
+                                >
+                                    Profile Handle
+                                </div>
+                                <div
+                                    class="my-1 w-[20%] border-gray-400 border-r-[1.5px] text-[17px] text-center uppercase font-upper create-date"
+                                >
+                                    Create Date
+                                </div>
+                                <div
+                                    class="my-1 w-[12%] border-gray-400 border-r-[1.5px] text-[17px] text-center uppercase font-upper"
+                                >
+                                    Actions
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fetch-container" class="w-full h-full">
+                            <div class="overflow" id="overflow">
+                                <% data.forEach(function(d, i){ %>
+                                <div id="name" class="listing flex w-[95%] h-14 px-3 mt-4 mx-auto rounded-md font">
+                                    <div class="w-[25%] my-auto name">
+                                        <a href="/userdata/<%= d.secret_handle %>" target="_blank"><%= d.name %></a>
+                                    </div>
+                                    <div class="w-[30%] my-auto email"><%= d.email %></div>
+                                    <div class="w-[30%] my-auto text-center email"><%= d.contact %></div>
+                                    <div class="w-[25%] hover:font-semibold transition-all my-auto text-center handle">
+                                        <a href="/profile/<%= d.secret_handle %>" target="_blank">
+                                            <%= d.secret_handle %>
+                                        </a>
+                                    </div>
+                                    <div class="w-[20%] my-auto text-center create-date"><%= d.created_at %></div>
+                                    <div
+                                        class="activeButton my-auto active-button w-[12%] flex justify-end items-center relative"
+                                    >
+                                        <div id="label" class="mr-4">
+                                            <div
+                                                id="main-button"
+                                                data-userId="<%= d._id %>"
+                                                data-listindex="<%= i %>"
+                                                data-status="<%= d.status %>"
+                                                class="main-button w-9 flex items-center bg-red-600 rounded-full h-5 p-0.5"
+                                            >
+                                                <div
+                                                    data-userId="<%= d._id %>"
+                                                    data-listindex="<%= i %>"
+                                                    data-status="<%= d.status %>"
+                                                    class="button-dot w-3.5 h-3.5 rounded-full bg-white absolute translate-x-[0px]"
+                                                    id="button-dot"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+                                <div class="empty p-2 w-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11111111111111111111111111 -->
+
+                    <!-- 22222222222222222222222222222 -->
+                    <!-- for email container -->
+                    <div id="tile-two" class="login-list-container w-full h-full absolute opacity-0  transition-all ">
+                        <div class="search flex justify-between  h-[8%]">
+                            <h2 class="text-2xl my-auto font-semibold">Email request</h2>
+                            <div class="flex">
+                                <i class="fa-solid fa-magnifying-glass mx-4 my-auto"></i>
+                                <input
+                                    id="search"
+                                    type="search"
+                                    placeholder="Search..."
+                                    class="outline-none p-3 w-[6.5rem] my-auto transition-all rounded-md h-[2rem]"
+                                    name=""
+                                />
+                                <div class="fetch-button w-28 flex justify-center items-center">
+                                    <button id="fetch-btn" class="bg-blue-700 px-5 py-1 rounded-md text-white">
+                                        Refresh
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-full container">
+                            <div class="overflow" id="overflow"></div>
+                        </div>
+                    </div>
+                    <!-- for email container -->
+                </div>
+                <!-- 22222222222222222222222222222222222 -->
+
+                <!-- toogler -->
+            </div>
+        </div>
+        <script type="module" src="/js/admin-panal.js"></script>
+    </body>
+</html>

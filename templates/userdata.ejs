@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/js/tailwindcss.js"></script>
+        <title>USER DATA</title>
+        <style>
+
+            :root{
+                --tiles-bg:#dddddd;
+                /* --tiles-bg:#c0c0c0; */
+            }
+
+            .box{
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397)
+            }
+            
+        </style>
+
+
+    </head>
+    <body class="h-screen  ">
+        <div class="color px-14 bg-[#ffffff] ">
+            <h1 class="text-center text-4xl font-mono py-4 w-full">Secret data<span class="font-serif text-[#ff9d00] "  > !!!!!!!!!!!!!!! </span></h1>
+            <div class="h-[91%] pl-4">
+                <div class="">
+                    <div style="background-color: var(--tiles-bg);" class=" my-10 rounded-xl p-4  ">
+                        <h2 class="text-xl  ">User General Details :-</h2>
+                        <div class="data flex w-full h-full justify-center  items-center  ">
+                            <div class=" w-[25rem]  h-auto my-12 flex justify-center ">
+                                <img class="rounded-xl" src="<%= data.image  %>" alt="user image" />
+                            </div>
+                            <div class=" w-full h-full flex justify-center items-center leading-10 ">
+                                <div class="w-2/4 pl-10  ">
+                                    <h4 class="text-left font-semibold ">Name:- <span> <%= data.name %></span></h4>
+                                    <h4 class="text-left font-semibold ">Contact:- <span> <%= data.contact %></span></h4>
+                                    <h4 class="text-left font-semibold ">Email:- <span> <%= data.email %></span></h4>
+                                    <h4 class="text-left font-semibold ">Address:- <span> <%= data.address %></span></h4>
+            
+                                    <h4 class="text-left font-semibold ">Pincode:- <span> <%= data.pin %></span></h4>
+                                    <h4 class="text-left font-semibold ">Date-Of-Birth:- <span> <%= data.dob %></span></h4>
+                                    <h4 class="text-left font-semibold " id="date">Create-date:- <span> <%= data.created_at %></span></h4>
+                                    <h4 class="text-left font-semibold ">Handle:- <span> <%= data.secret_handle %></span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background-color: var(--tiles-bg) ;" class="my-10 rounded-xl p-4" >
+                        <h2 class="text-xl ">User Hobbies :-</h2>
+                        <div class="data flex py-4  px-10 ">
+                            <h4 class=" font-semibold mx-2 " ><%= data.hobbies[0] %>,</h4>
+                            <h4 class=" font-semibold mx-2 " ><%= data.hobbies[1] %>,</h4>
+                            <h4 class=" font-semibold mx-2 " ><%= data.hobbies[2] %>,</h4>
+                            <h4 class=" font-semibold mx-2 " ><%= data.hobbies[3] %></h4>
+                        </div>
+                    </div>
+                    <div style="background-color: var(--tiles-bg) ;" class="my-10 rounded-xl p-4">
+                        <h2 class="text-xl  ">User Skills :-</h2>
+                        <div class="data py-8 px-10 ">
+                            <p><%= data.skills %></p>
+                        </div>
+                    </div>
+                    <div style="background-color: var(--tiles-bg) ;" class="my-10 rounded-xl p-4">
+                        <h2 class="text-xl  ">User Education :-</h2>
+                        <div class="data py-14 ">
+                            <div class="box mb-[3rem] rounded-lg bg-[#ffbfbf] h-[4rem] flex justify-around items-center px-4 " >
+                                <div class=" w-[20%] text-center border-x-2 border-white font-semibold text-black" >Degree</div>
+                                <div class=" w-[20%] text-center border-x-2 border-white font-semibold text-black" >Year</div>
+                                <div class=" w-[20%] text-center border-x-2 border-white font-semibold text-black" >University</div>
+                                <div class=" w-[20%] text-center border-x-2 border-white font-semibold text-black" >School</div>
+                                <div class=" w-[20%] text-center border-x-2 border-white font-semibold text-black" >Result</div>
+                            </div>
+                            <!-- data  -->
+                        
+                            <% data.education.forEach(edu => { %>
+                                <div class="box rounded-lg h-[3rem] flex justify-around items-center mt-4 px-4 " >
+                                    <div class="w-[20%] text-center " ><%= edu.degree %></div>
+                                    <div class="w-[20%] text-center " ><%= edu.year %></div>
+                                    <div class="w-[20%] text-center " ><%= edu.university %></div>
+                                    <div class="w-[20%] text-center " ><%= edu.school %></div>
+                                    <div class="w-[20%] text-center " ><%= edu.result %></div>
+                                </div>
+                            <%  }) %>
+
+                            <!-- data  -->
+                        </div>
+                    </div>
+                    <div style="background-color: var(--tiles-bg) ;" class="my-10 rounded-xl p-4">
+                        <h2 class="text-xl  ">User Experince :-</h2>
+                        <div class="data py-14 ">
+                            <div class="box mb-[3rem] rounded-lg bg-[#ffbfbf] h-[4rem] flex justify-around items-center px-4 " >
+                                <div class="w-[35%] text-center border-x-2 border-white font-semibold text-black" >Year</div>
+                                <div class="w-[35%] text-center border-x-2 border-white font-semibold text-black" >Organization</div>
+                                <div class="w-[35%] text-center border-x-2 border-white font-semibold text-black" >Designation</div>
+                            </div>
+                            <% data.experince.forEach(exp => { %>
+                                <div class="box rounded-lg h-[3rem] flex justify-around items-center mt-4 px-4 " >
+                                    <div class="w-[35%] text-center " ><%= exp.year %></div>
+                                    <div class="w-[35%] text-center " ><%= exp.organization %></div>
+                                    <div class="w-[35%] text-center " ><%= exp.designation %></div>
+                                </div>
+                            <%  }) %>
+                        </div>
+                    </div>
+                    <div style="background-color: var(--tiles-bg) ;" class="my-10 rounded-xl p-4">
+                        <h2 class="text-xl  ">User Awards :-</h2>
+                        <div class="data py-14 ">
+                            <div class="box mb-[3rem] rounded-lg bg-[#ffbfbf] h-[4rem] flex justify-around items-center px-4 " >
+                                <div class="w-[50%] text-center border-x-2 border-white font-semibold text-black" >Certificate Name</div>
+                                <div class="w-[50%] text-center border-x-2 border-white font-semibold text-black" >Year</div>
+                            </div>
+                            <% data.certificates.forEach(cer => { %>
+                                <div class="box rounded-lg h-[3rem] flex justify-around items-center mt-4 px-4 " >
+                                    <div class="w-[50%] text-center " ><%= cer.certificate_name %></div>
+                                    <div class="w-[50%] text-center " ><%= cer.year %></div>
+                                </div>
+                            <%  }) %>
+                        </div>
+                    </div>
+                    <div style="background-color: var(--tiles-bg) ;" class="my-10 rounded-xl p-4">
+                        <h2 class="text-xl  ">User Testimonial :-</h2>
+                        <div class="data py-14 ">
+                            <div class="box mb-[3rem] rounded-lg bg-[#ffbfbf] h-[4rem] flex justify-around items-center px-4 ">
+                                <div class="w-[35%] text-center border-x-2 border-white font-semibold text-black" >Student Name</div>
+                                <div class="w-[35%] text-center border-x-2 border-white font-semibold text-black" >Student Class</div>
+                                <div class="w-[35%] text-center border-x-2 border-white font-semibold text-black" >For Students</div>
+                            </div>
+                            
+                            <% data.testimonial.forEach(test => { %>
+                                <div class="box rounded-lg p-1 flex justify-around items-center mt-4 px-4 ">
+                                    <div class="w-[35%] text-center " ><%= test.student_name %></div>
+                                    <div class="w-[35%] text-center " ><%= test.student_class %></div>
+                                    <div class="w-[35%] text-sm text-center " ><%= test.for_students %></div>
+                                </div>
+                            <%  }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script type="module" src="../public/js/userdata.js"></script> -->
+    </body>
+</html>

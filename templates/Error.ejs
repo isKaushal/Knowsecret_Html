@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="js/tailwindcss.js"></script>
+        <style>
+            *,
+            ::after,
+            ::before {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .main {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .dot > :nth-child(1) {
+                animation: animate 1.5s linear infinite;
+            }
+
+            .dot > :nth-child(2) {
+                animation: animate 1.5s linear infinite;
+                animation-delay: 0.2s;
+            }
+
+            .dot > :nth-child(3) {
+                animation: animate 1.5s linear infinite;
+                animation-delay: 0.4s;
+            }
+
+            .dot > :nth-child(4) {
+                animation: animate 1.5s linear infinite;
+                animation-delay: 0.6s;
+                color: red;
+            }
+
+            @keyframes animate {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+        </style>
+        <title>Admin login</title>
+    </head>
+    <body>
+        <div class="main justify-center items-center flex lg:p-8 bg-[#bfcdd6]">
+            <div class="inner-wrap justify-center items-center flex w-full">
+                <div class="w-[40%] mt-[-8rem] h-full flex justify-center items-center">
+                    <img class="w-[70%]" src="/image/11-01.svg" alt="" />
+                </div>
+                <div class="w-[60%] h-full items-end grid">
+                    <div class="w-full justify-center">
+                        <div class="grid justify-center items-center">
+                            <div class="overflow-hidden">
+                                <h1 class="text-5xl text-[#45494c] font-bold">500 Server Error</h1>
+                            </div>
+                            <h3 class="text-4xl flex w-full text-[#7b7d7e] font-bold text-center">
+                                Oops, Something went wrong
+                                <div class="dot">   
+                                    <span>.</span>
+                                    <span>.</span>
+                                    <span>.</span>
+                                    <span>!</span>
+                                </div>
+                            </h3>
+                            <h3 class="text-2xl my-4 flex w-full text-[#7b7d7e] font-bold text-center">Please Check Your Password</h3>
+                            <div class="grid w-full">
+                                <div class="button-wrap flex w-full items-center h-[8rem]">
+                                    <a href="admin/login">
+                                        <button class="bg-blue-500 w-28 h-10 rounded-lg text-white my">
+                                            Login Page
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+@import url(main.css);
+
+
+/* main tile no2 Start */
+/* main tile no2 */
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    margin-left: -10rem;
+    border-radius: 100%;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #4b4b4b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--Yellow--color);
+}
+
+
+#main-tile2{
+    transition: var(--transition--);
+    height: 80%;
+    width: 62rem;
+    background-color: var(--cards-color);
+}
+
+
+.image-wrap2{
+    border: 1px solid var(--Yellow--color);
+
+}
+
+.second-image{
+    transform: translateX(-2rem) translateY(2rem);
+}
+
+.list-item{
+    line-height: 45px;
+    font-size: 19px;
+}
+
+small{
+    color: #b0b0b0;
+}
+
+/* .hobbies{
+    display: none;
+} */
+
+.hobbies > i {
+ color: var(--Yellow--color);
+}
+
+
+.hobbies-wrap::before{
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 1px;
+    display: block;
+    background:linear-gradient(0.25turn ,rgb(39, 39, 39),rgb(255, 157, 0),rgb(39, 39, 39));
+}
+
+.hobbies-wrap::after{
+    content: '';
+    width: 98%;
+    top: 100%;
+    height: 1px;
+    position: absolute;
+    display: block;
+    background:linear-gradient(0.25turn ,rgb(39, 39, 39),rgb(255, 157, 0),rgb(39, 39, 39));
+
+}
+
+/* dots in key Frames css */
+
+/* main tile no2 */
+/* main tile no2 End */
+
+/* main tile no3 Start */
+/* main tile no3 */
+
+#main-tile3{
+    transition: var(--transition--);
+    height: 80%;
+    width: 62rem;
+    background-color: var(--cards-color);
+}
+
+.Education::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(0.25turn,rgb(255, 157, 0)0%,rgb(39, 39, 39));
+}
+
+.Education-main::before{
+    content: "";
+    width: 1px;
+    left: 50%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: linear-gradient(rgb(39, 39, 39),rgb(255, 157, 0),rgb(39, 39, 39));
+}
+.Education-main2::before{
+    content: "";
+    width: 1px;
+    left: 50%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: linear-gradient(rgb(39, 39, 39),rgb(255, 157, 0),rgb(39, 39, 39));
+}
+.Education-main2::after{
+    content: "";
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background: linear-gradient(0.25turn,rgb(39, 39, 39),rgb(255, 157, 0),rgb(39, 39, 39));
+}
+
+
+
+/* main tile no3 */
+/* main tile no3 End */
+
+/* main tile no4 Start */
+/* main tile no4 */
+
+#main-tile4{
+    transition: var(--transition--);
+    height: 80%;
+    width: 62rem;
+    background-color: var(--cards-color);
+}
+
+.send{
+    transition: 0.3s ease-in-out;
+
+}
+
+.send:hover{
+    background-color: var(--Yellow--color);
+    color:white;
+}
+
+/* main tile no4 */
+/* main tile no4 End */
+/* main tile no5 Start */
+/* main tile no5 */
+
+#main-tile5{
+    transition: var(--transition--);
+    height: 80%;
+    width: 62rem;
+    background-color: var(--cards-color);
+}
+
+
+.Testimonials-heading::after{
+    content: "";
+    width: 50%;
+    height: 1px;
+    margin-top: 0.5rem;
+    display: block;
+    background: linear-gradient(0.25turn,rgb(255, 157, 0)0%,rgb(39, 39, 39));
+}
+
+.Testimonials-cards{
+
+    background-color: var(--cards-color);
+    box-shadow: 1px 1px 10px ;
+}
+
+.icons-name-wrap > i{
+    color: var(--Yellow--color);
+    font-size: 2rem;
+}
+
+
+/* main tile no5 */
+/* main tile no5 End */

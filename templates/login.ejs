@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/js/tailwindcss.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+        <style>
+            *,
+            ::after,
+            ::before {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .main {
+                width: 100vw;
+                height: 100vh;
+                /* background-color: #e2d7d7; */
+            }
+
+            .form {
+                /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.137),15px 15px 20px rgba(0, 0, 0, 0.137) ; */ /*normal*/
+                box-shadow: -15px -15px 20px rgb(238, 217, 217),15px 15px 20px rgb(255, 176, 176) ; /*new mophism*/
+                /* box-shadow: inset 4px 4px 15px rgba(0, 0, 0, 0.137); */ /*inset shadow*/
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <title>Admin login</title>
+    </head>
+    <body>
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi explicabo modi recusandae laudantium voluptates quisquam aspernatur harum neque fugiat, consequuntur voluptatem veniam illo tempore nam voluptatum vel repudiandae pariatur earum. -->
+        <div class="main flex justify-center items-center bg-red-200  ">
+            <form method="post" class="form h-96 w-96 rounded-lg ">
+                <div class="text-wrap flex justify-center items-center ">
+                    <i class="fa-solid fa-earth-americas text-3xl m-4 "></i>
+                    <h1 class=" text-3xl font-bold  " >Admin login</h1>
+                </div>
+                <div class="  w-full justify-center items-center grid ">
+                    <input class=" w-[20rem] h-[3rem] my-2 rounded-md p-4 " placeholder="Email"  type="email" name="email" required />
+                    <input class=" w-[20rem] h-[3rem] my-2 rounded-md p-4 " placeholder="Password"  type="password" name="password" required />
+                </div>
+                <div class="  w-full justify-center items-center flex ">
+                    <button  class="bg-blue-500 w-28 h-10 rounded-lg text-white "  type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

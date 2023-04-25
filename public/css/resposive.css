@@ -1,0 +1,76 @@
+@media screen and (min-width: 250px) {
+
+    .image-wrap{
+        height: 40%;
+    }
+     
+    .main-inner{
+        overflow: hidden !important;
+    }
+    .second-image{
+        transform: translateX(-1rem) translateY(1rem);
+    }
+
+    .welcome-text,
+    .name-inner{
+        font-size: 18px;
+    }
+
+    .Education{
+        text-align: center;
+    }
+
+    .Education::after{
+        width: 100%;
+        background: linear-gradient(0.25turn, rgb(39, 39, 39),rgb(255, 157, 0),rgb(39, 39, 39));
+    }
+    
+    .Education-main::before{
+        display: none;
+    }
+    .Education-main::after{
+        display: none;
+    }
+    .Education-main2::before{
+        display: none;
+    }
+    .Education-main2::after{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .Education{
+        text-align: center;
+    }
+
+    .Education::after{
+        width: 70%;
+        background: linear-gradient(0.25turn,rgb(255, 157, 0),rgb(39, 39, 39));
+    }
+    
+    .Education-main::before{
+        display: block;
+    }
+    .Education-main::after{
+        display: block;
+    }
+    .Education-main2::before{
+        display: block;
+    }
+    .Education-main2::after{
+        display: block;
+    }
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    transition: var(--transition--);
+}
+
+.dropdown-active{
+    height: 28rem !important;
+}

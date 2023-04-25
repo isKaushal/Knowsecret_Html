@@ -1,0 +1,130 @@
+/* skills dots */
+.dots1{
+    background: var(--Yellow--color);
+    animation: Blink 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.dots2{
+    background: var(--Yellow--color);
+    animation: Blink 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 0.2s;
+}
+.dots3{
+    background: var(--Yellow--color);
+    animation: Blink 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 0.4s;
+}
+.dots4{
+    background: var(--Yellow--color);
+    animation: Blink 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 0.6s;
+}
+.dots5{
+    background: var(--Yellow--color);
+    animation: Blink 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 0.8s;
+}
+
+
+@keyframes Blink {
+    50% {
+        opacity: .5;
+    }
+}
+/* skills dots */
+/* animate-scale */
+.scale-forwards{
+    animation: animation-one 1s linear forwards;
+}
+.scale-reverse{
+    animation: animation-one 1s linear reverse;
+}
+
+@keyframes animation-one {
+    0%{transform: scale(1); opacity: 1;}
+    100%{transform: scale(0); opacity: 0;}
+}
+/* animate-scale */
+/* animate-top-to-bottom */
+
+.top-to-center{
+    animation: animation-two 1s linear forwards;
+}
+@keyframes animation-two {
+    0%{transform: translateY(-120%);}
+    100%{transform: translateY(0%)}
+}
+/* animate-top-to-bottom */
+
+.center-to-bottom{
+    animation: animation-three 1s linear forwards;
+}
+
+@keyframes animation-three {
+    0%{transform: translateY(0%);}
+    100%{transform: translateY(120%)}
+}
+
+/* for tiles animations */
+
+.active{
+    opacity: 1 !important;
+    z-index: 10 !important;
+}
+
+/* for tiles animations */
+
+/* center tiles only */
+
+#center-tiles-wrap{
+    transition: var(--transition--);
+}
+
+#MainTile1{
+    opacity: 0;
+    transition: var(--transition--);
+    width: 100%;
+    height: 100%;
+    background-color: var(--cards-color);
+}
+#MainTile2{
+    opacity: 0;
+    transition: var(--transition--);
+    width: 100%;
+    height: 100%;
+    background-color: var(--cards-color);
+
+}
+#MainTile3{
+    opacity: 0;
+    transition: var(--transition--);
+    width: 100%;
+    height: 100%;
+    background-color: var(--cards-color);
+
+}
+#MainTile4{
+    opacity: 0;
+    transition: var(--transition--);
+    width: 100%;
+    height: 100%;
+    background-color: var(--cards-color);
+
+}
+#MainTile5{
+    opacity: 0;
+    transition: var(--transition--);
+    width: 100%;
+    height: 100%;
+    background-color: var(--cards-color);
+
+} 
+#MainTile6{
+    opacity: 0;
+    transition: var(--transition--);
+    width: 100%;
+    height: 100%;
+    background-color: var(--cards-color);
+
+} 
+
+/* center tiles only */
